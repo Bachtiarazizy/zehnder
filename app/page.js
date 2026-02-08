@@ -347,7 +347,7 @@ export default function AboutUsPage() {
         observerRef.current.kill();
       }
     };
-  });
+  }, []);
 
   return (
     <div className="fixed inset-0 overflow-hidden select-none bg-stone-900">

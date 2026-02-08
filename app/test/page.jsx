@@ -125,7 +125,7 @@ export default function AnimatedSections() {
     return () => {
       splitHeadingsRef.current.forEach((split) => split.revert());
     };
-  });
+  }, []);
 
   return (
     <div className="fixed inset-0 overflow-hidden select-none">
