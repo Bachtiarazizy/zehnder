@@ -77,7 +77,7 @@ const RulerTimeline = ({ chapters, activeChapter, isDarkBg, timelineRef, onChapt
         {/* Vertical ruler */}
         <div className="relative" style={{ height: `${(chapters.length - 1) * 8}rem` }}>
           {/* Main vertical line */}
-          <div className={`absolute left-0 top-0 w-[2px] h-full transition-colors duration-300 ${isDark ? "bg-white/30" : "bg-black/30"}`} />
+          <div className={`absolute left-0 top-0 w-0.5 h-full transition-colors duration-300 ${isDark ? "bg-white/30" : "bg-black/30"}`} />
 
           {/* Tick marks */}
           {chapters.map((chapter, index) => {
@@ -172,8 +172,8 @@ export default function AboutUsPage() {
       subtitle: "Frankfurt's Recovery",
       description: "Establishment of Zehnder Pumpen after WWII, contributing to Frankfurt's industrial recovery.",
       media: [
-        { src: "/images/Zehnder_pumps_1.webp", position: "top-left" },
-        { src: "/images/Zehnder_pumps_2.webp", position: "top-right" },
+        { src: "/images/zehnder_pumps_1.webp", position: "top-left" },
+        { src: "/images/zehnder_pumps_2.webp", position: "top-right" },
       ],
       logo: "/images/chapter_4_logo.webp",
       logoPosition: "center",
@@ -199,7 +199,7 @@ export default function AboutUsPage() {
       title: "Today's Responsibility",
       subtitle: "Heritage & Stewardship",
       description: "The family now carries its heritage forward into a dynamic real-estate market, guided by the principles of stewardship and continuity.",
-      media: [{ src: "/images/Lennart_zehnder.webp", position: "top-left" }],
+      media: [{ src: "/images/lennart_zehnder.webp", position: "top-left" }],
       logo: "/images/ZEHNDER__ICON_GOLD.svg",
       logoPosition: "center",
       bgColor: "bg-stone-900",
@@ -347,7 +347,7 @@ export default function AboutUsPage() {
         observerRef.current.kill();
       }
     };
-  }, []);
+  });
 
   return (
     <div className="fixed inset-0 overflow-hidden select-none bg-stone-900">
@@ -382,7 +382,7 @@ export default function AboutUsPage() {
                     {/* Right Side - Content (65%) */}
                     <div ref={(el) => (contentRef.current[index] = el)} className={`lg:col-span-8 flex flex-col justify-center ${chapter.textColor}`}>
                       <div className="animate-content mb-3 text-sm lg:text-base font-light tracking-widest opacity-70">{chapter.year}</div>
-                      <h2 className="chapter-title text-2xl font-semibold lg:text-4xl font-light mb-4 leading-tight">{chapter.title}</h2>
+                      <h2 className="chapter-title text-2xl font-semibold lg:text-4xl  mb-4 leading-tight">{chapter.title}</h2>
                       <p className="animate-content text-base lg:text-lg font-light leading-relaxed mb-8 opacity-90 max-w-xl">{chapter.description}</p>
                       {/* Media Preview with Custom Positioning */}
                       {chapter.media && chapter.media.length > 0 && (

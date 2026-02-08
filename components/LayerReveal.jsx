@@ -75,7 +75,7 @@ export default function LayerReveal() {
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Hero Section */}
-      <div className="h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 to-indigo-900">
+      <div className="h-screen flex items-center justify-center bg-linear-to-br from-purple-900 to-indigo-900">
         <div className="text-center text-white px-8">
           <h1 className="text-6xl md:text-7xl font-bold mb-6">Vertical Layer Reveal</h1>
           <p className="text-2xl md:text-3xl opacity-90">3 Layer Vertikal - Buka dari Bawah ke Atas 👇</p>
@@ -83,10 +83,10 @@ export default function LayerReveal() {
       </div>
 
       {/* Section dengan 3 Layer VERTIKAL */}
-      <section ref={sectionRef} className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50">
+      <section ref={sectionRef} className="relative h-screen flex items-center justify-center overflow-hidden bg-linear-to-br from-purple-50 via-pink-50 to-blue-50">
         {/* Konten yang di-reveal */}
         <div className="z-0 text-center px-8">
-          <h2 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">🎨 Revealed!</h2>
+          <h2 className="text-6xl md:text-8xl font-bold mb-6 bg-linear-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">🎨 Revealed!</h2>
           <p className="text-2xl md:text-4xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
             3 Layer vertikal membuka dari <span className="font-bold text-purple-600">BAWAH ke ATAS</span>
             <br />
@@ -124,7 +124,7 @@ export default function LayerReveal() {
       </div>
 
       {/* Extra Section */}
-      <div className="h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-purple-100">
+      <div className="h-screen flex items-center justify-center bg-linear-to-br from-blue-100 to-purple-100">
         <div className="text-center">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Keep Scrolling... 🚀</h2>
           <p className="text-xl text-gray-600">Smooth scroll dengan Lenis!</p>

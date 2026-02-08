@@ -4,6 +4,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -68,7 +69,7 @@ export default function TextReveal() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-700">
+      <div className="h-screen flex items-center justify-center bg-linear-to-br from-gray-900 to-gray-700">
         <div className="text-center text-white px-8">
           <h1 className="text-6xl md:text-7xl font-bold mb-6">Text Reveal Animation</h1>
           <p className="text-2xl md:text-3xl opacity-90">Scroll untuk melihat blocks slide down 👇</p>
@@ -79,7 +80,7 @@ export default function TextReveal() {
       <section ref={sectionRef} className="relative bg-black h-[70vh] xl:h-[120vh] w-full flex select-none overflow-hidden z-20">
         {/* Background Image Layer */}
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1557683316-973673baf926?w=1920&q=80" alt="Background" className="object-cover w-full h-full opacity-90" />
+          <Image src="https://images.unsplash.com/photo-1557683316-973673baf926?w=1920&q=80" alt="Background" className="object-cover w-full h-full opacity-90" />
         </div>
 
         {/* Sliding White Blocks - Overlay (Initial: menutupi penuh) */}
@@ -100,7 +101,7 @@ export default function TextReveal() {
             {/* Main Title */}
             <div className="flex flex-col w-full z-20 mix-blend-plus-lighter overflow-hidden">
               <p className="font-bold text-[15vw] md:text-[15vw] lg:text-[16vw] text-center text-slate-500 uppercase leading-none">AWARENESS</p>
-              <div className="w-full h-[2px] bg-slate-500 mt-3" />
+              <div className="w-full h-0.5 bg-slate-500 mt-3" />
             </div>
 
             {/* Top Links */}

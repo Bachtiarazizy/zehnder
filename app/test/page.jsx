@@ -125,7 +125,7 @@ export default function AnimatedSections() {
     return () => {
       splitHeadingsRef.current.forEach((split) => split.revert());
     };
-  }, []);
+  });
 
   return (
     <div className="fixed inset-0 overflow-hidden select-none">
@@ -152,7 +152,7 @@ export default function AnimatedSections() {
                   backgroundPosition: index === 4 ? "50% 45%" : "center",
                 }}
               >
-                <h2 ref={(el) => (headingsRef.current[index] = el)} className="z-[999] text-[clamp(1rem,6vw,10rem)] font-semibold leading-tight text-center -mr-[0.5em] w-[90vw] max-w-[1200px] normal-case text-white">
+                <h2 ref={(el) => (headingsRef.current[index] = el)} className="z-999 text-[clamp(1rem,6vw,10rem)] font-semibold leading-tight text-center -mr-[0.5em] w-[90vw] max-w-300 normal-case text-white">
                   {section.title}
                 </h2>
               </div>
