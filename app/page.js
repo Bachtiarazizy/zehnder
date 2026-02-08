@@ -366,10 +366,16 @@ export default function AboutUsPage() {
                 <div className="container mx-auto h-full px-8 lg:px-16 flex items-center">
                   {/* Grid: 35% left, 65% right */}
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 w-full">
-                    {/* Left Side - Logo (35%) */}
+                    {/* Left Side - Logo (35%) - FIXED: Using Next.js Image */}
                     <div className={`lg:col-span-4 flex ${getLogoAlignment(chapter.logoPosition)} justify-start`}>
-                      <div className="w-48 h-48 lg:w-80 lg:h-80 flex items-center justify-center">
-                        <img src={chapter.logo} alt={`${chapter.title} logo`} className="max-w-full max-h-full object-contain shadow-md" />
+                      <div className="w-48 h-48 lg:w-80 lg:h-80 relative flex items-center justify-center">
+                        {chapter.logo.endsWith(".svg") ? (
+                          // For SVG, use regular img tag
+                          <img src={chapter.logo} alt={`${chapter.title} logo`} className="max-w-full max-h-full object-contain shadow-md" />
+                        ) : (
+                          // For other images, use Next.js Image with fill
+                          <Image src={chapter.logo} alt={`${chapter.title} logo`} fill className="object-contain shadow-md" sizes="(max-width: 768px) 192px, 320px" priority={index === 0} />
+                        )}
                       </div>
                     </div>
 
